@@ -26,7 +26,7 @@ export default function RootLayout({
 }: Readonly<{
 	children: React.ReactNode;
 }>) {
-	const GA_ID = 'G-6QBXJS72HN';
+	const GA_ID = process.env.GC_G4A;
 	return (
 		<html lang="en">
 		<head>
