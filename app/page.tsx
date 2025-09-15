@@ -1,134 +1,134 @@
-'use client';
+"use client";
 
 const services = [
   {
     icon: Shield,
-    title: 'SOC 2 Compliance',
+    title: "SOC 2 Compliance",
     description:
-      'Comprehensive SOC 2 Type I and Type II readiness with automated evidence collection and continuous monitoring.',
+      "Comprehensive SOC 2 Type I and Type II readiness with automated evidence collection and continuous monitoring.",
     features: [
-      'Automated evidence collection',
-      'Pre-audit readiness assessment',
-      'Ongoing monitoring',
-      'Expert guidance',
+      "Automated evidence collection",
+      "Pre-audit readiness assessment",
+      "Ongoing monitoring",
+      "Expert guidance",
     ],
-    timeline: '3-6 months',
+    timeline: "3-6 months",
     popular: true,
   },
   {
     icon: Globe,
-    title: 'ISO 27001 Certification',
+    title: "ISO 27001 Certification",
     description:
-      'Complete ISO 27001 implementation with risk assessment, policy development, and certification support.',
+      "Complete ISO 27001 implementation with risk assessment, policy development, and certification support.",
     features: [
-      'Risk assessment',
-      'ISMS implementation',
-      'Policy templates',
-      'Certification support',
+      "Risk assessment",
+      "ISMS implementation",
+      "Policy templates",
+      "Certification support",
     ],
-    timeline: '6-12 months',
+    timeline: "6-12 months",
     popular: false,
   },
   {
     icon: Heart,
-    title: 'HIPAA Compliance',
+    title: "HIPAA Compliance",
     description:
-      'Healthcare-focused compliance with comprehensive BAA management and security controls.',
+      "Healthcare-focused compliance with comprehensive BAA management and security controls.",
     features: [
-      'BAA management',
-      'Risk assessments',
-      'Security controls',
-      'Training programs',
+      "BAA management",
+      "Risk assessments",
+      "Security controls",
+      "Training programs",
     ],
-    timeline: '2-4 months',
+    timeline: "2-4 months",
     popular: false,
   },
   {
     icon: Users,
-    title: 'GDPR Compliance',
+    title: "GDPR Compliance",
     description:
-      'European privacy regulation compliance with data mapping, consent management, and breach procedures.',
+      "European privacy regulation compliance with data mapping, consent management, and breach procedures.",
     features: [
-      'Data mapping',
-      'Consent management',
-      'Breach procedures',
-      'DPIA templates',
+      "Data mapping",
+      "Consent management",
+      "Breach procedures",
+      "DPIA templates",
     ],
-    timeline: '4-8 months',
+    timeline: "4-8 months",
     popular: false,
   },
   {
     icon: Zap,
-    title: 'Compliance Automation',
+    title: "Compliance Automation",
     description:
-      'Automated compliance monitoring with real-time dashboards and intelligent alerting systems.',
+      "Automated compliance monitoring with real-time dashboards and intelligent alerting systems.",
     features: [
-      'Real-time monitoring',
-      'Automated reporting',
-      'Risk scoring',
-      'Integration APIs',
+      "Real-time monitoring",
+      "Automated reporting",
+      "Risk scoring",
+      "Integration APIs",
     ],
-    timeline: '1-2 months',
+    timeline: "1-2 months",
     popular: true,
   },
   {
     icon: FileCheck,
-    title: 'Multi-Framework Management',
+    title: "Multi-Framework Management",
     description:
-      'Manage multiple compliance frameworks from a single platform with shared controls and evidence.',
+      "Manage multiple compliance frameworks from a single platform with shared controls and evidence.",
     features: [
-      'Unified dashboard',
-      'Shared evidence',
-      'Cross-framework mapping',
-      'Efficiency optimization',
+      "Unified dashboard",
+      "Shared evidence",
+      "Cross-framework mapping",
+      "Efficiency optimization",
     ],
-    timeline: 'Ongoing',
+    timeline: "Ongoing",
     popular: false,
   },
 ];
 
 const processSteps = [
   {
-    step: '1',
-    title: 'Assessment',
+    step: "1",
+    title: "Assessment",
     description:
-      'We evaluate your current compliance posture and identify gaps.',
+      "We evaluate your current compliance posture and identify gaps.",
   },
   {
-    step: '2',
-    title: 'Planning',
+    step: "2",
+    title: "Planning",
     description:
-      'Custom roadmap with timelines, milestones, and resource requirements.',
+      "Custom roadmap with timelines, milestones, and resource requirements.",
   },
   {
-    step: '3',
-    title: 'Implementation',
+    step: "3",
+    title: "Implementation",
     description:
-      'Guided implementation with automated tools and 24/7 expert support.',
+      "Guided implementation with automated tools and 24/7 expert support.",
   },
   {
-    step: '4',
-    title: 'Monitoring',
+    step: "4",
+    title: "Monitoring",
     description:
-      'Continuous monitoring and maintenance to ensure ongoing compliance.',
+      "Continuous monitoring and maintenance to ensure ongoing compliance.",
   },
 ];
 
 const benefits = [
   {
     icon: Clock,
-    title: '80% Faster',
-    description: 'Reduce compliance preparation time with automation',
+    title: "80% Faster",
+    description: "Reduce compliance preparation time with automation",
   },
   {
     icon: Target,
-    title: '99.8% Success Rate',
-    description: 'Industry-leading audit success rate',
+    title: "99.8% Success Rate",
+    description: "Industry-leading audit success rate",
   },
   {
     icon: Shield,
-    title: 'Expert Support',
-    description: '24/7 access to compliance professionals',
+    title: "Expert Support",
+    description: "24/7 access to compliance professionals",
   },
 ];
 
@@ -171,7 +171,7 @@ export default function SeevicesPage() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-5xl font-bold mb-4">Our Services</h2>
+          <h2 className="text-5xl font-bold mb-4">Our Offering</h2>
           <p className="max-w-2xl mx-auto text-xl">
             Comprehensive compliance solutions tailored to your industry and
             business needs.
@@ -187,7 +187,7 @@ export default function SeevicesPage() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="relative"
             >
-              <Card className={`h-full ${service.popular ? 'ring' : ''}`}>
+              <Card className={`h-full ${service.popular ? "ring" : ""}`}>
                 {service.popular && (
                   <Badge className="absolute -top-2 left-4">Most Popular</Badge>
                 )}
@@ -207,13 +207,9 @@ export default function SeevicesPage() {
                     ))}
                   </div>
 
-                  <div className="flex justify-between items-center text-sm mb-4">
-                    <span>Timeline: {service.timeline}</span>
-                  </div>
-
                   <Button
                     className="w-full"
-                    variant={service.popular ? 'default' : 'outline'}
+                    variant={service.popular ? "default" : "outline"}
                     asChild
                   >
                     <Link href="/contact">Learn More</Link>
@@ -239,7 +235,7 @@ export default function SeevicesPage() {
           </p>
         </motion.div>
 
-        <Carousel opts={{ align: 'start', loop: true }} className="w-full">
+        <Carousel opts={{ align: "start", loop: true }} className="w-full">
           <CarouselContent>
             {processSteps.map((step) => (
               <CarouselItem
@@ -271,27 +267,27 @@ export default function SeevicesPage() {
             className="gap-2 text-xl px-10 py-7" /* bigger text + more padding */
             asChild
           >
-            <Link href="/contact">Contact Us</Link>
+            <Link href="/contact">Join Our Waiting List</Link>
           </Button>
         </div>
-      </section>{' '}
+      </section>{" "}
       <Footer />
     </main>
   );
 }
 
-import { motion } from 'framer-motion';
-import { Footer } from '@/components/footer';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
+import { motion } from "framer-motion";
+import { Footer } from "@/components/footer";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from '@/components/ui/carousel';
-import { Button } from '@/components/ui/button';
+} from "@/components/ui/carousel";
+import { Button } from "@/components/ui/button";
 import {
   Shield,
   FileCheck,
@@ -303,7 +299,6 @@ import {
   ArrowRight,
   Clock,
   Target,
-} from 'lucide-react';
-import { Navbar } from '@/components/navbar';
-import Link from 'next/link';
-
+} from "lucide-react";
+import { Navbar } from "@/components/navbar";
+import Link from "next/link";

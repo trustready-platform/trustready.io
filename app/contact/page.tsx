@@ -1,66 +1,66 @@
-'use client';
+"use client";
 const services = [
   {
     icon: Shield,
-    title: 'SOC 2 Compliance',
+    title: "SOC 2 Compliance",
     features: [
-      'Automated evidence collection',
-      'Pre-audit readiness assessment',
-      'Ongoing monitoring',
-      'Expert guidance',
+      "Automated evidence collection",
+      "Pre-audit readiness assessment",
+      "Ongoing monitoring",
+      "Expert guidance",
     ],
     popular: true,
   },
   {
     icon: Zap,
-    title: 'Compliance Automation',
+    title: "Compliance Automation",
     description:
-      'Automated compliance monitoring with real-time dashboards and intelligent alerting systems.',
+      "Automated compliance monitoring with real-time dashboards and intelligent alerting systems.",
     features: [
-      'Real-time monitoring',
-      'Automated reporting',
-      'Risk scoring',
-      'Integration APIs',
+      "Real-time monitoring",
+      "Automated reporting",
+      "Risk scoring",
+      "Integration APIs",
     ],
-    timeline: '1-2 months',
+    timeline: "1-2 months",
     popular: true,
   },
   {
     icon: Globe,
-    title: 'ISO 27001 Certification',
+    title: "ISO 27001 Certification",
     features: [
-      'Risk assessment',
-      'ISMS implementation',
-      'Policy templates',
-      'Certification support',
+      "Risk assessment",
+      "ISMS implementation",
+      "Policy templates",
+      "Certification support",
     ],
     popular: false,
   },
 
   {
     icon: FileCheck,
-    title: 'Multi-Framework Management',
+    title: "Multi-Framework Management",
     features: [
-      'Unified dashboard',
-      'Shared evidence',
-      'Cross-framework mapping',
-      'Efficiency optimization',
+      "Unified dashboard",
+      "Shared evidence",
+      "Cross-framework mapping",
+      "Efficiency optimization",
     ],
     popular: false,
   },
 ];
 
 const formSchema = z.object({
-  name: z.string().min(2, 'Name must be at least 2 characters'),
-  email: z.email('Enter a valid email'),
+  name: z.string().min(2, "Name must be at least 2 characters"),
+  email: z.email("Enter a valid email"),
   company: z.string().optional(),
   phone: z
     .string()
     .refine(
       (val) => !val || validator.isMobilePhone(val),
-      'Invalid phone number',
+      "Invalid phone number",
     ),
-  query: z.string().min(2, 'Query must be at least 2 characters'),
+  query: z.string().min(2, "Query must be at least 2 characters"),
 });
 
 type FormData = z.infer<typeof formSchema>;
@@ -93,7 +93,7 @@ function SupportedFrameworks() {
         >
           <Card
             className={`h-full transition-transform duration-300 hover:scale-[1.03] ${
-              service.popular ? 'ring' : ''
+              service.popular ? "ring" : ""
             }`}
           >
             {service.popular && (
@@ -123,14 +123,14 @@ export default function Home() {
   const [submitted, setSubmitted] = useState(false);
   const form = useForm<FormData>({
     resolver: zodResolver(formSchema),
-    defaultValues: { name: '', email: '', company: '', phone: '' },
+    defaultValues: { name: "", email: "", company: "", phone: "" },
   });
 
   const onSubmit = async (data: FormData) => {
     try {
-      const res = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
       });
       if (res.ok) {
@@ -138,10 +138,10 @@ export default function Home() {
         form.reset();
         setTimeout(() => setSubmitted(false), 3000);
       } else {
-        console.error('Email send failed');
+        console.error("Email send failed");
       }
     } catch (err) {
-      console.error('Request failed', err);
+      console.error("Request failed", err);
     }
   };
 
@@ -168,7 +168,9 @@ export default function Home() {
         </div>
         <div>
           <section className="w-full max-w-lg py-0 px-6">
-            <h3 className="text-4xl font-bold text-center mb-6">Contact Us</h3>
+            <h3 className="text-4xl font-bold text-center mb-6">
+              Get Early Access
+            </h3>
             <Form {...form}>
               <form
                 onSubmit={form.handleSubmit(onSubmit)}
@@ -240,7 +242,7 @@ export default function Home() {
                         <Textarea
                           rows={5}
                           className="resize-y w-full"
-                          placeholder="A detailed description of your inquiry and the service you're interested in."
+                          placeholder="A detailed description of your inquiry and the compliance framework you're interested in."
                           {...field}
                         />
                       </FormControl>
@@ -274,19 +276,19 @@ export default function Home() {
   );
 }
 
-import { ComplianceBadges } from '@/components/compliance-badges';
-import { Footer } from '@/components/footer';
-import { useState } from 'react';
-import { useForm } from 'react-hook-form';
-import { z } from 'zod';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import validator from 'validator';
-import { Input } from '@/components/ui/input';
-import { Badge } from '@/components/ui/badge';
-import { Navbar } from '@/components/navbar';
+import { ComplianceBadges } from "@/components/compliance-badges";
+import { Footer } from "@/components/footer";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { motion, AnimatePresence } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import validator from "validator";
+import { Input } from "@/components/ui/input";
+import { Badge } from "@/components/ui/badge";
+import { Navbar } from "@/components/navbar";
 import {
   Form,
   FormControl,
@@ -294,7 +296,7 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@/components/ui/form';
-import { Shield, FileCheck, CheckCircle, Globe, Zap } from 'lucide-react';
-import { Textarea } from '@/components/ui/textarea';
-import Link from 'next/link';
+} from "@/components/ui/form";
+import { Shield, FileCheck, CheckCircle, Globe, Zap } from "lucide-react";
+import { Textarea } from "@/components/ui/textarea";
+import Link from "next/link";

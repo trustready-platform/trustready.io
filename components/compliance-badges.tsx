@@ -1,5 +1,5 @@
 export function ComplianceBadges() {
-  const badges = ['SOC 2', 'ISO 27001', 'HIPAA', 'GDPR'];
+  const badges = ["SOC 2", "ISO 27001", "HIPAA", "GDPR"];
 
   return (
     <div className="flex flex-wrap gap-2 mt-4">
@@ -12,4 +12,4 @@ export function ComplianceBadges() {
   );
 }
 
-import { Badge } from '@/components/ui/badge';
+import { Badge } from "@/components/ui/badge";

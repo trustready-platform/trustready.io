@@ -1,8 +1,8 @@
-import { NextRequest, NextResponse } from 'next/server';
-import nodemailer from 'nodemailer';
+import { NextRequest, NextResponse } from "next/server";
+import nodemailer from "nodemailer";
 
 const transporter = nodemailer.createTransport({
-  host: 'smtp.gmail.com',
+  host: "smtp.gmail.com",
   port: 465,
   secure: true,
   auth: {
@@ -18,17 +18,17 @@ export async function POST(req: NextRequest) {
     const { name, email, company, phone, query } = body;
 
     if (!name || !email || !query)
-      return NextResponse.json({ error: 'Missing fields' }, { status: 400 });
+      return NextResponse.json({ error: "Missing fields" }, { status: 400 });
 
     const mail = {
       from: `"TrustReady Web" <${process.env.SMTP_USER}>`,
-      to: 'info@trustready.io',
+      to: "info@trustready.io",
       subject: `Demo request from ${name}`,
       text:
         `Name: ${name}\n` +
         `Email: ${email}\n` +
-        `Company: ${company || 'n/a'}\n` +
-        `Phone: ${phone || 'n/a'}\n\n` +
+        `Company: ${company || "n/a"}\n` +
+        `Phone: ${phone || "n/a"}\n\n` +
         `Query:\n${query}`,
       replyTo: email,
     };
@@ -37,6 +37,6 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ ok: true });
   } catch (err) {
     console.error(err);
-    return NextResponse.json({ error: 'Mail failed' }, { status: 500 });
+    return NextResponse.json({ error: "Mail failed" }, { status: 500 });
   }
 }

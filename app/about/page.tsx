@@ -1,27 +1,27 @@
-'use client';
+"use client";
 
 const values = [
   {
     icon: Shield,
-    title: 'Security First',
+    title: "Security First",
     description:
-      'We prioritize the security of your data and systems above all else.',
+      "We prioritize the security of your data and systems above all else.",
   },
   {
     icon: Users,
-    title: 'Customer Success',
+    title: "Customer Success",
     description:
       "Your compliance success is our success. We're with you every step.",
   },
   {
     icon: Target,
-    title: 'Precision',
-    description: 'Accurate, thorough, and reliable compliance solutions.',
+    title: "Precision",
+    description: "Accurate, thorough, and reliable compliance solutions.",
   },
   {
     icon: Award,
-    title: 'Excellence',
-    description: 'We strive for excellence in everything we do.',
+    title: "Excellence",
+    description: "We strive for excellence in everything we do.",
   },
 ];
 
@@ -38,16 +38,16 @@ export default function AboutPage() {
           className="text-center"
         >
           <h1 className="text-5xl font-bold mb-6">
-            About{' '}
+            About{" "}
             <Link
               href="/"
               className="text-inherit hover:text-[var(--color-primary)] transition-colors duration-300"
             >
               Trustready
             </Link>
-          </h1>{' '}
+          </h1>{" "}
           <p className="text-xl max-w-3xl mx-auto leading-relaxed">
-            we help fast-growing companies achieve compliance without the
+            We help fast-growing companies achieve compliance without the
             hassle. From audit preparation to ongoing monitoring, our platform
             ensures you stay compliant while focusing on growth. Built for
             startups and enterprises alike, we make trust your competitive
@@ -118,7 +118,7 @@ export default function AboutPage() {
             </div>
           </motion.div>
         </div>
-      </section>{' '}
+      </section>{" "}
       {/* CTA Section */}
       <section className="max-w-6xl mx-auto px-6 py-2">
         <motion.div
@@ -134,10 +134,10 @@ export default function AboutPage() {
                 className="gap-2 text-xl px-10 py-7" /* bigger text + more padding */
                 asChild
               >
-                <Link href="/contact">Contact Us</Link>
+                <Link href="/contact">Join Our Waiting List</Link>
               </Button>
             </div>
-          </section>{' '}
+          </section>{" "}
         </motion.div>
       </section>
       <Footer />
@@ -145,10 +145,10 @@ export default function AboutPage() {
   );
 }
 
-import { Footer } from '@/components/footer';
-import { motion } from 'framer-motion';
-import { Card, CardContent } from '@/components/ui/card';
-import { Users, Shield, Target, Award } from 'lucide-react';
-import { Navbar } from '@/components/navbar';
-import { Button } from '@/components/ui/button';
-import Link from 'next/link';
+import { Footer } from "@/components/footer";
+import { motion } from "framer-motion";
+import { Card, CardContent } from "@/components/ui/card";
+import { Users, Shield, Target, Award } from "lucide-react";
+import { Navbar } from "@/components/navbar";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
