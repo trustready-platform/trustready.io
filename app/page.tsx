@@ -171,7 +171,7 @@ export default function SeevicesPage() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-5xl font-bold mb-4">Our Offering</h2>
+          <h2 className="text-5xl font-bold mb-4">Our Offerings</h2>
           <p className="max-w-2xl mx-auto text-xl">
             Comprehensive compliance solutions tailored to your industry and
             business needs.
