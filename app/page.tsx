@@ -267,7 +267,7 @@ export default function SeevicesPage() {
             className="gap-2 text-xl px-10 py-7" /* bigger text + more padding */
             asChild
           >
-            <Link href="/contact">Join Our Waiting List</Link>
+            <Link href="/contact">Join Our Early Access Program</Link>
           </Button>
         </div>
       </section>{" "}
