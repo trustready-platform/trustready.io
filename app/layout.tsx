@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   title: "Trustready",
   description: "Rapid Compliance for Startups",
   icons: {
-    icon: "letter-t.png",
+    icon: "letter-t-better.png",
   },
 };
 
