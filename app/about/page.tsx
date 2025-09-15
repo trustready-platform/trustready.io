@@ -68,7 +68,7 @@ export default function AboutPage() {
               <p className="text-xl">
                 Founded in 2025, Trustready emerged from a simple observation:
                 compliance shouldn&apos;t be a barrier to growth. Our founder,
-                having spent decades in cybersecurity and audit roles, witnessed
+                having spent years in cybersecurity and audit roles, witnessed
                 countless companies struggle with manual, time-consuming
                 compliance processes.
               </p>
