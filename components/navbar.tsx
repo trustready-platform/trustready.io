@@ -9,7 +9,7 @@ const navItems = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about" },
   { label: "Contact", href: "/contact" },
-  { label: "Book a Meeting", href: "https://tidycal.com/m4j7k9m/trustready"}
+  { label: "Book a Meeting", href: "https://tidycal.com/m4j7k9m/trustready" },
 ];
 
 export function Navbar() {
