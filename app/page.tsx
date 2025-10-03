@@ -174,8 +174,16 @@ export default function SeevicesPage() {
           <h2 className="text-5xl font-bold mb-4">Our Offerings</h2>
           <p className="max-w-2xl mx-auto text-xl">
             Comprehensive compliance solutions tailored to your industry and
-            business needs.
+            business needs. Book a meeting with us to find out more.
           </p>
+			  <Button
+                size="lg"
+                className="gap-2 text-xl px-10 py-7 mt-8" /* bigger text + more padding */
+                asChild
+              >
+                <Link href="https://tidycal.com/m4j7k9m/trustready">Book</Link>
+              </Button>
+	
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -261,14 +269,15 @@ export default function SeevicesPage() {
         </Carousel>
       </section>
       <section className="mx-auto">
-        <div className="flex justify-center">
-          <Button
-            size="lg"
-            className="gap-2 text-xl px-10 py-7" /* bigger text + more padding */
-            asChild
-          >
-            <Link href="/contact">Join Our Early Access Program</Link>
-          </Button>
+		<div className="flex gap-5 justify-center px-10">
+			  <Button
+				size="lg"
+				className="gap-2 text-xl px-10 py-7" /* bigger text + more padding */
+				asChild
+			  >
+				<Link href="/contact">Join Our Early Access Program</Link>
+			  </Button>
+
         </div>
       </section>{" "}
       <Footer />

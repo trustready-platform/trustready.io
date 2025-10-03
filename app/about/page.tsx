@@ -128,14 +128,27 @@ export default function AboutPage() {
           className="rounded-2xl p-12 text-center"
         >
           <section className="mx-auto">
-            <div className="flex justify-center">
-              <Button
+		  <div className="grid lg:grid-cols-2 gap-10 items-start">
+		  	  <div>
+			  <h1 className="text-4xl text-center font-bold mb-6">Waiting List</h1>
+	              <Button
                 size="lg"
                 className="gap-2 text-xl px-10 py-7" /* bigger text + more padding */
                 asChild
               >
-                <Link href="/contact">Join Our Waiting List</Link>
+                <Link href="/contact">Join</Link>
               </Button>
+			  </div>
+			  <div>
+			  <h1 className="text-4xl text-center font-bold mb-6">Meeting</h1>
+	              <Button
+                size="lg"
+                className="gap-2 text-xl px-10 py-7" /* bigger text + more padding */
+                asChild
+              >
+                <Link href="https://tidycal.com/m4j7k9m/trustready">Book</Link>
+              </Button>
+			  </div>
             </div>
           </section>{" "}
         </motion.div>
