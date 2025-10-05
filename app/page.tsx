@@ -161,6 +161,13 @@ export default function SeevicesPage() {
             solutions that scale with your business. Automated, expert-guided,
             and designed for modern companies.
           </p>
+		  <Button
+            size="lg"
+            className="gap-2 text-xl px-10 py-7" /* bigger text + more padding */
+            asChild
+          >
+            <Link href="https://tidycal.com/m4j7k9m/trustready">Book a Meeting</Link>
+          </Button>
         </motion.div>
       </section>
       {/* Services Grid */}
@@ -174,15 +181,9 @@ export default function SeevicesPage() {
           <h2 className="text-5xl font-bold mb-4">Our Offerings</h2>
           <p className="max-w-2xl mx-auto text-xl">
             Comprehensive compliance solutions tailored to your industry and
-            business needs. Book a meeting with us to find out more.
+            business needs.
           </p>
-          <Button
-            size="lg"
-            className="gap-2 text-xl px-10 py-7 mt-8" /* bigger text + more padding */
-            asChild
-          >
-            <Link href="https://tidycal.com/m4j7k9m/trustready">Book</Link>
-          </Button>
+
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
